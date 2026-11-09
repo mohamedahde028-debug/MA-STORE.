@@ -1,0 +1,159 @@
+<!DOCTYPE html><html lang="ar" dir="rtl"><head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="theme-color" content="#111111"><title>سلة المشتريات | MA STORE</title>
+
+<link rel="stylesheet" href="css/style.css">
+
+<style>
+    .cart-page {
+        width: 92%;
+        max-width: 1000px;
+        margin: 40px auto;
+    }
+
+    .cart-page h1 {
+        color: var(--gold);
+        margin-bottom: 25px;
+        font-size: 26px;
+    }
+
+    #cart-items {
+        display: grid;
+        gap: 15px;
+    }
+
+    .cart-item {
+        background: #181818;
+        color: #ffffff;
+        padding: 20px;
+        border-radius: 10px;
+        border: 1px solid rgba(214, 173, 85, 0.3);
+        border-right: 4px solid #d6ad55;
+    }
+
+    .cart-item h3 {
+        color: var(--gold);
+        margin-bottom: 10px;
+    }
+
+    .quantity-controls {
+        display: flex;
+        align-items: center;
+        gap: 12px;
+        margin: 12px 0;
+    }
+
+    .quantity-controls button {
+        min-width: 38px;
+        min-height: 38px;
+        border: none;
+        padding: 8px 13px;
+        border-radius: 6px;
+        background: var(--gold);
+        color: #111;
+        font-weight: bold;
+    }
+
+    .remove-button {
+        background: var(--red);
+        color: white;
+        border: none;
+        padding: 9px 15px;
+        border-radius: 6px;
+    }
+
+    .cart-summary {
+        margin-top: 25px;
+        padding: 22px;
+        background: #181818;
+        color: white;
+        border: 1px solid var(--border);
+        border-radius: 12px;
+    }
+
+    .cart-summary h2 {
+        color: var(--gold);
+        margin-bottom: 15px;
+    }
+
+    #cart-total {
+        color: var(--gold);
+        font-size: 21px;
+    }
+
+    .checkout-link {
+        display: block;
+        text-align: center;
+        margin-top: 20px;
+        padding: 13px;
+        background: var(--gold);
+        color: #111;
+        border-radius: 7px;
+        font-weight: bold;
+    }
+
+    .continue-shopping {
+        display: inline-block;
+        margin-top: 20px;
+        color: var(--gold);
+    }
+
+    .empty-message {
+        color: #aaa;
+        text-align: center;
+        padding: 30px 10px;
+        background: #181818;
+        border-radius: 10px;
+    }
+</style>
+
+</head><body><header>
+    <a href="index.html" class="logo">
+        MA STORE
+    </a>
+
+    <a href="index.html" class="secondary-button">
+        متابعة التسوق
+    </a>
+</header>
+
+<main class="cart-page">
+
+    <h1>🛒 سلة المشتريات</h1>
+
+    <div id="cart-items">
+        <p class="empty-message">جاري تحميل السلة...</p>
+    </div>
+
+    <div class="cart-summary">
+
+        <h2>ملخص الطلب</h2>
+
+        <p>
+            الإجمالي:
+            <strong id="cart-total">0 جنيه</strong>
+        </p>
+
+        <a href="checkout.html" class="checkout-link">
+            إتمام الطلب
+        </a>
+
+    </div>
+
+    <a href="index.html" class="continue-shopping">
+        ← العودة إلى التسوق
+    </a>
+
+</main>
+
+<footer>
+    <h3>MA STORE</h3>
+    <p>Drive Your Journey</p>
+    <p>جميع الحقوق محفوظة © MA STORE 2026</p>
+</footer>
+
+<script src="js/app.js"></script>
+<script src="js/cart.js"></script>
+
+</body></html>
