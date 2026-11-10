@@ -49,7 +49,7 @@ function checkout(){
 let n=document.getElementById('name').value,ph=document.getElementById('phone').value,ad=document.getElementById('address').value;
 if(!n||!ph||!ad){alert('اكمل كل البيانات');return}
 let msg='طلب جديد من MA-STORE%0Aالاسم: '+n+'%0Aالموبايل: '+ph+'%0Aالعنوان: '+ad+'%0Aالمنتجات: '+cart.map(p=>p.name).join(' - ');
-window.open('https://wa.me/201000000000?text='+msg);
+window.open('https://wa.me/01206094511?text='+msg);
 localStorage.removeItem('cart');alert('تم ارسال طلبك بنجاح ✅');location.reload();
 }
 </script>
