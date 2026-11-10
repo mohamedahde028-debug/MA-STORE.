@@ -1,51 +1,12 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>MA-STORE | متجرك الالكتروني</title>
-<style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}
-body{background:#f6f6f6;color:#111}
-header{background:#111;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center;position:sticky;top:0;z-index:10}
-header b{font-size:22px;letter-spacing:1px}
-header b span{color:#ffcc00}
-nav a{color:#fff;text-decoration:none;margin-right:14px;font-size:14px}
-.hero{background:linear-gradient(135deg,#111,#333);color:#fff;padding:50px 20px;text-align:center}
-.hero h1{font-size:32px;margin-bottom:10px}
-.hero p{opacity:.8;margin-bottom:20px}
-.hero a{background:#ffcc00;color:#111;padding:12px 24px;border-radius:30px;text-decoration:none;font-weight:bold;display:inline-block}
-.section{padding:20px}
-.section h2{margin-bottom:14px;font-size:20px}
-.grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
-.card{background:#fff;border-radius:16px;overflow:hidden;box-shadow:0 2px 10px rgba(0,0,0,.08)}
-.card img{width:100%;height:150px;object-fit:cover}
-.card .info{padding:12px}
-.card h3{font-size:15px;margin-bottom:6px}
-.price{color:#e60023;font-weight:bold;font-size:16px}
-.card button{width:100%;margin-top:10px;background:#111;color:#fff;border:0;padding:10px;border-radius:10px;font-weight:bold}
-footer{background:#111;color:#fff;text-align:center;padding:20px;margin-top:20px;font-size:13px}
-</style>
-</head>
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>MA-STORE</title><link rel="stylesheet" href="style.css"></head>
 <body>
-<header>
-<b>MA<span>-STORE</span></b>
-<nav><a href="index.html">الرئيسية</a><a href="products.html">المنتجات</a><a href="cart.html">السلة</a></nav>
-</header>
-<div class="hero">
-<h1>أفضل المنتجات بأفضل سعر 🔥</h1>
-<p>شحن سريع لكل المحافظات | الدفع عند الاستلام</p>
-<a href="products.html">تسوق الآن</a>
-</div>
-<div class="section">
-<h2>منتجات مميزة</h2>
-<div class="grid">
-<div class="card"><img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?w=600"><div class="info"><h3>ساعة ذكية فاخرة</h3><div class="price">1,250 ج.م</div><button onclick="location.href='products.html'">عرض المنتج</button></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1505740420928-5e560c06d30e?w=600"><div class="info"><h3>سماعة بلوتوث أصلية</h3><div class="price">850 ج.م</div><button onclick="location.href='products.html'">عرض المنتج</button></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=600"><div class="info"><h3>حذاء رياضي مريح</h3><div class="price">1,100 ج.م</div><button onclick="location.href='products.html'">عرض المنتج</button></div></div>
-<div class="card"><img src="https://images.unsplash.com/photo-1526170375885-4d8ecf77b99f?w=600"><div class="info"><h3>كاميرا احترافية</h3><div class="price">3,500 ج.م</div><button onclick="location.href='products.html'">عرض المنتج</button></div></div>
-</div>
-</div>
-<footer>© 2026 MA-STORE - جميع الحقوق محفوظة | Alexandria, Egypt</footer>
-</body>
-</html>
+<header><img src="logo.png" style="width:120px"><nav><a href="index.html">الرئيسية</a><a href="products.html">المنتجات</a><a href="cart.html">السلة</a><a href="admin.html">لوحة تحكم</a></nav></header>
+<div class="hero"><h1>اهلا بيك في <span>MA-STORE</span></h1><p>أفضل منتجات بأفضل سعر - شحن سريع</p><a class="btn" href="products.html">تسوق دلوقتي</a></div>
+<h2 style="text-align:center;padding:20px">منتجات مميزة</h2>
+<div class="grid" id="grid"></div>
+<footer>© 2026 MA-STORE - جميع الحقوق محفوظة</footer>
+<script src="main.js"></script>
+</body></html>
