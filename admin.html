@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>لوحة التحكم - MA STORE</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header><div class="logo-box"><img src="logo.png" onerror="this.style.display='none'"><span>MA <b>ADMIN</b></span></div><a href="index.html" style="color:#D4AF37">رجوع للمتجر</a></header>
+<div id="loginBox" class="form"><h2 class="title">دخول لوحة التحكم</h2><input type="password" id="pass" placeholder="ادخل كلمة السر" autocomplete="off"><button class="btn-gold" onclick="adminLogin()">دخول</button></div>
+<div id="adminBox" style="display:none">
+<h2 class="title">لوحة تحكم MA STORE - كاملة</h2><p id="stats" style="text-align:center;font-weight:800;background:#D4AF37;color:#000;padding:15px;border-radius:12px;margin:0 15px"></p>
+<h2 class="title">اسعار الشحن - كل محافظات مصر الـ 27</h2><div class="form" id="shippingAdmin"></div><button class="btn-gold" onclick="saveShipping()" style="display:block;margin:10px auto">حفظ اسعار الشحن</button>
+<h2 class="title">اضافة اكسسوار جديد - كل بلوك لوحده</h2>
+<div class="blocks-vertical">
+<div class="block-item"><h3>بلوك اضاءة</h3><button class="btn-gold" onclick="quickAdd('اضاءة')">اضافة منتج اضاءة</button></div>
+<div class="block-item"><h3>بلوك فرش</h3><button class="btn-gold" onclick="quickAdd('فرش')">اضافة منتج فرش</button></div>
+<div class="block-item"><h3>بلوك حماية</h3><button class="btn-gold" onclick="quickAdd('حماية')">اضافة منتج حماية</button></div>
+<div class="block-item"><h3>بلوك صوتيات</h3><button class="btn-gold" onclick="quickAdd('صوتيات')">اضافة منتج صوتيات</button></div>
+<div class="block-item"><h3>بلوك عناية</h3><button class="btn-gold" onclick="quickAdd('عناية')">اضافة منتج عناية</button></div>
+<div class="block-item"><h3>بلوك كفرات معدن</h3><button class="btn-gold" onclick="quickAdd('كفرات معدن')">اضافة منتج كفرات معدن</button></div>
+<div class="block-item"><h3>بلوك كفرات TPU</h3><button class="btn-gold" onclick="quickAdd('كفرات TPU')">اضافة منتج كفرات TPU</button></div>
+<div class="block-item"><h3>بلوك كفرات طاره</h3><button class="btn-gold" onclick="quickAdd('كفرات طاره')">اضافة منتج كفرات طاره</button></div>
+<div class="block-item"><h3>بلوك دواسات ساهر</h3><button class="btn-gold" onclick="quickAdd('دواسات ساهر')">اضافة منتج دواسات ساهر</button></div>
+<div class="block-item"><h3>بلوك دواسات TPE</h3><button class="btn-gold" onclick="quickAdd('دواسات TPE')">اضافة منتج دواسات TPE</button></div>
+</div>
+<form class="form" onsubmit="addProduct(event)">
+<input id="pName" placeholder="اسم الاكسسوار" required>
+<input id="pPrice" type="number" inputmode="numeric" placeholder="السعر" required>
+<input id="pOld" type="number" inputmode="numeric" placeholder="السعر القديم قبل الخصم">
+<input id="pDesc" placeholder="وصف الاكسسوار">
+<select id="pCat"><option>اضاءة</option><option>فرش</option><option>حماية</option><option>صوتيات</option><option>عناية</option><option>كفرات معدن</option><option>كفرات TPU</option><option>كفرات طاره</option><option>دواسات ساهر</option><option>دواسات TPE</option></select>
+<label style="background:#000;padding:15px;border-radius:10px;text-align:center;color:#D4AF37;border:1px solid #D4AF37">اختار صورة الاكسسوار من موبايلك<input type="file" id="pFile" accept="image/*" style="margin-top:10px"></label>
+<img id="preview" style="width:100%;border-radius:10px;display:none">
+<button class="btn-gold" type="submit">اضافة الاكسسوار</button>
+</form>
+<h2 class="title">المنتجات - تعديل / متوفر / حذف</h2><div id="adminProducts" class="grid"></div>
+<h2 class="title">الطلبات اللي وصلت - تأكيد / الغاء</h2><div id="ordersBox" class="form"></div><button class="btn-gold" onclick="clearOrders()" style="display:block;margin:10px auto;background:#ef4444;color:#fff">مسح كل الطلبات</button>
+</div>
+<script src="js/main.js"></script><script src="js/admin.js"></script>
+</body></html>
