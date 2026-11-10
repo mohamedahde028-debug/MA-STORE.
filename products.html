@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>اكسسوارات السيارات - MA STORE</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header><div class="logo-box"><img src="logo.png" onerror="this.style.display='none'"><span>MA <b>STORE</b></span></div><nav><a href="index.html">الرئيسية</a><a href="products.html">اكسسوارات</a><a href="cart.html">السلة <b id="cartCount">0</b></a></nav></header>
+<h2 class="title">كل اكسسوارات عربيتك في مكان واحد</h2><p style="text-align:center;color:#D4AF37">الدفع عند الاستلام</p>
+<input type="text" id="search" placeholder="ابحث... مثلا: ليد، فرش، دواسة، كفرات، طاره..." oninput="renderProducts()" class="search">
+<div class="filter-vertical">
+<button onclick="filterCat('الكل')">الكل - كل المنتجات</button>
+<button onclick="filterCat('اضاءة')">اضاءة</button>
+<button onclick="filterCat('فرش')">فرش</button>
+<button onclick="filterCat('حماية')">حماية</button>
+<button onclick="filterCat('صوتيات')">صوتيات</button>
+<button onclick="filterCat('عناية')">عناية</button>
+<button onclick="filterCat('كفرات معدن')">كفرات معدن</button>
+<button onclick="filterCat('كفرات TPU')">كفرات TPU</button>
+<button onclick="filterCat('كفرات طاره')">كفرات طاره</button>
+<button onclick="filterCat('دواسات ساهر')">دواسات ساهر</button>
+<button onclick="filterCat('دواسات TPE')">دواسات TPE</button>
+</div>
+<h2 class="title">المنتجات الجديدة</h2>
+<div class="blocks-vertical" id="newBlocks"></div>
+<h2 class="title">كل المنتجات</h2>
+<div id="products" class="grid"></div>
+<footer><p>MA STORE 2026 - الدفع عند الاستلام</p></footer>
+<a href="https://wa.me/201206094511?text=عندي مشكلة" target="_blank" class="wa">عندك مشكلة؟ كلمنا واتساب</a>
+<script src="js/main.js"></script><script>renderProducts(); renderNewBlocks(); updateCartCount();</script>
+</body></html>
