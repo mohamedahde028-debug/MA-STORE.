@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0"><title>اتمام الطلب - MA STORE</title><link rel="stylesheet" href="css/style.css"></head>
+<body>
+<header><div class="logo-box"><img src="logo.png" onerror="this.style.display='none'"><span>MA <b>STORE</b></span></div></header>
+<h2 class="title">اتمام طلب عربيتك</h2><p style="text-align:center;color:#D4AF37">املا بياناتك، واختار محافظتك، وهنوصلك لحد باب البيت - والدفع عند الاستلام</p>
+<form class="form" onsubmit="submitOrder(event)">
+<input id="cName" type="text" placeholder="الاسم بالكامل" autocomplete="name" required>
+<input id="cPhone" type="tel" inputmode="numeric" pattern="[0-9+ ]{10,15}" placeholder="رقم التليفون - مثال: 01012345678" autocomplete="tel" dir="ltr" style="text-align:right" required>
+<input id="cCar" type="text" placeholder="نوع عربيتك وموديلها - مثال: كيا سيراتو 2022">
+<label>اختر محافظتك - الشحن لكل محافظات مصر الـ 27:</label>
+<select id="cGov" onchange="updateShipping()" required><option value="">-- اختر المحافظة --</option></select>
+<input id="cAddress" type="text" placeholder="العنوان بالتفصيل - الشارع - العمارة - الشقة" required>
+<div style="background:#000;padding:14px;border-radius:12px;text-align:center;font-weight:900;border:2px solid #22c55e;color:#22c55e">الدفع عند الاستلام - هتدفع لما الاوردر يوصلك لحد باب البيت</div>
+<input type="hidden" id="cPay" value="الدفع عند الاستلام">
+<div id="summary" style="background:#000;padding:15px;border-radius:12px;text-align:center;font-weight:800;border:2px solid #D4AF37;color:#D4AF37"></div>
+<button class="btn-gold" type="submit">تأكيد الطلب وارسال واتساب</button>
+</form>
+<footer><p>MA STORE 2026 - الدفع عند الاستلام</p></footer>
+<script src="js/main.js"></script><script>fillGovSelect(); updateShipping();</script>
+</body></html>
