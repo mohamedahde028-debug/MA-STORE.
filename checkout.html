@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>إتمام الطلب | MA-STORE</title>
+<style>
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Segoe UI',Tahoma,sans-serif}
+body{background:#f6f6f6}
+header{background:#111;color:#fff;padding:16px 20px;display:flex;justify-content:space-between;align-items:center}
+header b{font-size:22px} header b span{color:#ffcc00}
+nav a{color:#fff;text-decoration:none;margin-right:14px;font-size:14px}
+.box{background:#fff;margin:20px;padding:20px;border-radius:16px;box-shadow:0 2px 10px rgba(0,0,0,.08)}
+input,select{width:100%;padding:13px;border:1px solid #ddd;border-radius:10px;margin-top:12px;font-size:15px}
+button{width:100%;background:#ffcc00;color:#111;border:0;padding:14px;border-radius:12px;font-weight:bold;font-size:16px;margin-top:16px}
+.success{text-align:center;padding:40px}
+</style>
+</head>
+<body>
+<header><b>MA<span>-STORE</span></b><nav><a href="index.html">الرئيسية</a><a href="products.html">المنتجات</a><a href="cart.html">السلة</a></nav></header>
+<div class="box" id="box">
+<h2>إتمام الطلب ✅</h2>
+<p style="margin-top:8px;color:#666;font-size:14px">اكمل بياناتك وهنكلمك للتأكيد</p>
+<input id="name" placeholder="الاسم بالكامل">
+<input id="phone" placeholder="رقم الموبايل - مثال 01000000000">
+<input id="address" placeholder="المحافظة - المدينة - العنوان بالتفصيل">
+<select id="pay"><option>الدفع عند الاستلام</option><option>فودافون كاش</option><option>انستا باي</option></select>
+<button onclick="done()">تأكيد الطلب</button>
+</div>
+<script>
+function done(){
+let n=document.getElementById('name').value,ph=document.getElementById('phone').value,ad=document.getElementById('address').value;
+if(!n||!ph||!ad){alert('اكمل كل البيانات من فضلك');return}
+document.getElementById('box').innerHTML=`<div class="success"><h1>🎉</h1><h2>شكراً يا ${n} !</h2><p style="margin-top:10px">تم استلام طلبك بنجاح<br>هنكلمك على ${ph} للتأكيد</p><br><a href="index.html">الرجوع للمتجر</a></div>`;
+localStorage.removeItem('cart');
+}
+</script>
+</body>
+</html>
